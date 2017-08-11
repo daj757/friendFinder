@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/daj757/friendFinder/issues"
   },
-  "homepage": "https://github.com/daj757/friendFinder#readme"
+  "homepage": "https://github.com/daj757/friendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "path": "^0.12.7"
+  }
 }
