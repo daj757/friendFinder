@@ -11,11 +11,11 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
-require("./app/routing/apiRoutes");
-require("./app/routing/htmlRoutes");
+let run2 =require("./app/routing/apiRoutes");
+let run = require("./app/routing/htmlRoutes");
 
-
-
+run2(app)
+run(app)
 
 
 
