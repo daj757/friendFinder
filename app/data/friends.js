@@ -20,7 +20,18 @@ let data = {
  	name: "Marie",
  	photo: "https://leadershipspirit.files.wordpress.com/2013/10/stock_2013_hi-res-download_2_1.jpg",
  	scores: [2, 4, 3, 1, 5, 3, 1, 5, 2, 1]
- }]
+ },
+ {
+ 	name: "Ricky",
+ 	photo: "http://speakingaboutpresenting.com/wp-content/uploads/2009/01/istock_businessman.jpg",
+ 	scores: [2, 2, 2, 2, 3, 5, 1, 1, 1, 3]
+ },
+ {
+ 	name: "Nicky",
+ 	photo: "http://www.divorce.legal/wp-content/uploads/2010/10/younger-business-woman.jpg",
+ 	scores: [2, 2, 2, 2, 3, 5, 1, 1, 1, 3]
+ }
+ ]
 };
 
 module.exports = data;

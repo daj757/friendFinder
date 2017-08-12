@@ -4,37 +4,36 @@ let scoreArray = [];
 let totalScore = 0;
 
 console.log(scoreArray)
-let run2 = function(app){
+let run2 = function(app) {
 
-app.post("/api/friends", function(req, res) {
-	//turns array of strings into numbers
+    app.post("/api/friends", function(req, res) {
+        //turns array of strings into numbers
 
-	for(var i=0; i<req.body.scores.length; i++) 
-		{ req.body.scores[i] = parseInt(req.body.scores[i], 10); } 
-		
-   for(item in user.all){
-	let allScores = user.all[item].scores;
-	
-		for(let i = 0; i < allScores.length; i ++){
+        for (var i = 0; i < req.body.scores.length; i++) { req.body.scores[i] = parseInt(req.body.scores[i], 10); }
 
-			if(allScores[i] === req.body.scores[i]){
-			
-			totalScore++
-		}
-		
-	}
-	
-scoreArray.push(totalScore);
-totalScore = 0;	
-	}
-//returns index of largest value in array
+        for (item in user.all) {
+            let allScores = user.all[item].scores;
 
-let index = scoreArray.indexOf(Math.max(...scoreArray));
+            for (let i = 0; i < allScores.length; i++) {
 
-res.send(user.all[index])
-//rest
-scoreArray = []
-})
+                if (allScores[i] === req.body.scores[i]) {
+
+                    totalScore++
+                }
+
+            }
+
+            scoreArray.push(totalScore);
+            totalScore = 0;
+        }
+        //returns index of largest value in array
+
+        let index = scoreArray.indexOf(Math.max(...scoreArray));
+
+        res.send(user.all[index])
+        //rest
+        scoreArray = []
+    })
 
 }
 
