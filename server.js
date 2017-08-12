@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,9 +18,6 @@ run2(app)
 run(app)
 
 
-
-
-
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+app.listen(port, function() {
+    console.log("App listening on PORT " + port);
 });
