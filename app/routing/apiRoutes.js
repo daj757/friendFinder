@@ -35,6 +35,11 @@ let run2 = function(app) {
         scoreArray = []
     })
 
+    app.get("/api/friends", function(req, res){
+
+    	res.send(user.all)
+    })
+
 }
 
 module.exports = run2
